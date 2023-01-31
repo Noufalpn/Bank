@@ -24,17 +24,49 @@ constructor(){ }
 ngOnInit(): void{
 
 }
-login(){
-  alert ('login clicked')
+// login(){
+//   var acnum=this.acno
+//   var psw=this.psw
+//   var userDetails=this.userDetails
+//   if(acnum in userDetails){
+//   if(psw==userDetails[acnum]["password"]){
+//     alert("Login Success")
+//   }
+//   else{
+//     alert("Incorrect Password")
+//   }
+// }
+// else{
+//   alert("acno incorrect or not registered yet")
+// }
+
+// }
+login(a:any,b:any ){
+  var acnum=a.value
+  var psw=b.value
+  var userDetails=this.userDetails
+  if(acnum in userDetails){
+  if(psw==userDetails[acnum]["password"]){
+    alert("Login Success")
+  }
+  else{
+    alert("Incorrect Password")
+  }
 }
-acnoChange(event:any){
-  this.acno=event.target.value
-  console.log(this.acno);
+else{
+  alert("acno incorrect or not registered yet")
+}
+
+}
+
+// acnoChange(event:any){
+//   this.acno=event.target.value
+//   console.log(this.acno);
   
   
-}
-pswrdChange(event:any){
-  this.psw=event.target.value
-  console.log(this.psw);
-}
+// }
+// pswrdChange(event:any){
+//   this.psw=event.target.value
+//   console.log(this.psw);
+// }
 }
