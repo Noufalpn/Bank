@@ -22,25 +22,18 @@ ngOnInit(): void{
 
 }
 
-login(a:any,b:any ){
-  var acnum=a.value
-  var psw=b.value
-  var userDetails=this.ds.userDetails
-  if(acnum in userDetails){
-  if(psw==userDetails[acnum]["password"]){
-    alert("Login Success")
-        this.router.navigateByUrl('dashboard')
-
+login(){
+  var acnum=this.acno
+  var psw=this.psw
+  const result=this.ds.login(acnum,psw)
+  if(result){
+    alert('login success')
+    this.router.navigateByUrl('dashboard')
   }
   else{
-    alert("Incorrect Password")
+    alert("incorrect acno or password")
   }
-}
-else{
-  alert("acno incorrect or not registered yet")
-}
-
-}
+  }
 }
 
 // acnoChange(event:any){

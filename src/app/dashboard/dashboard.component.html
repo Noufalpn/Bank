@@ -1,1 +1,57 @@
-<h1>Welcome User</h1>
+<h1>Welcome {{user}}</h1>
+
+<div class="mt-3 p-2 w-25 container text-center border border-dark rounded-pill" style="background-color: rgba(40, 56, 80, 0.581);">
+    <a style="text-decoration: none; color: rgb(255, 255, 255);" routerLink="/transaction">View Transaction History</a>
+</div>
+
+<div class="container row mb-5 p-5"> 
+    <div class="text-center container col-lg-6 col-md-12">   
+        <div class="container w-75 rounded text-center p-5 mt-5" style="background-color: rgba(0, 0, 0, 0.400);">
+            <h1 class="text-white">Deposit</h1>
+<form action="">
+    <div class="p-3 mt-2">
+        <input [(ngModel)]="acno"  id="acid" class="form-control" name="acnum1" type="text" placeholder="Enter acnum">
+    </div>
+    <div class="p-3 mt-2">
+        <input [(ngModel)]="psw" class="form-control" id="psw1" name="paswrd1" type="password" placeholder="Enter Password">
+    </div>
+    <div class="p-3 mt-2">
+        <input [(ngModel)]="amnt" class="form-control" id="amouid" name="amnt1" type="text" placeholder="Amount">
+    </div>
+    <div class="p-3 mt-2">
+        <button class="btn btn-outline-warning" (click)="deposit()" type="button">Deposit</button>
+    </div>
+    
+    </form>
+        </div>
+    </div>
+    
+    </div>
+    
+
+    
+        <div class="text-center container col-6 p-5">   
+            <div class="container w-75 rounded text-center p-5 mt-5" style="background-color: rgba(0, 0, 0, 0.400);">
+                <h1>Withdraw</h1>
+    <form action="">
+
+    <div class="p-3 mt-2">
+        <input [(ngModel)]="acno1"  id="acid2" class="form-control" name="acnum2" type="text" placeholder="Enter acnum">
+    </div>
+    <div class="p-3 mt-2">
+        <input [(ngModel)]="psw1"  class="form-control" id="psw2" name="paswrd2" type="password" placeholder="Enter Password">
+    </div>
+    <div class="p-3 mt-2">
+        <input [(ngModel)]="amnt1" class="form-control" id="amouid1" name="amnt2" type="text" placeholder="Amount">
+    </div>
+    <div class="p-3 mt-2">
+        <button class="btn btn-outline-warning" (click)="withdraw()" type="button">Withdraw</button>
+    </div>
+    
+    </form>
+    
+    
+    </div>
+        </div>
+        
+    
